@@ -24,7 +24,7 @@
 
 
 
-Route::group(['prefix' => 'admin','middleware' => ['roles','auth']], function() {
+Route::group(['prefix' => 'admin','middleware' => ['roles']], function() {
 	Route::get('/',['uses'                    =>'Admin\AdminController@index','roles' => ['Admin']]);
 	Route::get('/index',['uses'                    =>'Admin\AdminController@index','roles' => ['Admin']]);
 	Route::post('/index',['uses'                    =>'Admin\AdminController@changesemester','roles' => ['Admin']]);
@@ -125,7 +125,9 @@ Route::post('/instructorlogin' , [
 
 Route::group(['prefix' => 'instructor','middleware' => 'roles'], function() {
 	Route::get('/index', ['uses' => 'Instructors\InstructorController@index','roles' => ['Instructor']]);
-	Route::get('/schedule', ['uses' => 'Instructors\InstructorController@schedule','roles' => ['Instructor']]);
+	Route::get('/schedule',
+			 ['uses' => 'Instructors\InstructorController@schedule','roles' => ['Instructor']
+			]);
     Route::get('/sendsms', ['uses' => 'Instructors\InstructorController@sendsms','roles' => ['Instructor']]);
     Route::get('/students/{first_subject}/{second_subject?}', ['uses' => 'Instructors\InstructorController@students','roles' => ['Instructor']]);
     Route::post('/addstudentgrade/', ['uses' => 'Instructors\InstructorController@addstudentgrade','roles' => ['Instructor']]);
@@ -136,7 +138,7 @@ Route::group(['prefix' => 'instructor','middleware' => 'roles'], function() {
 Route::get('/assistantdeanlogin',['uses' => 'Deans\AssistantDeanController@showLoginForm']);
 Route::post('/assistantdeanlogin',['uses' => 'Deans\AssistantDeanController@submitlogin']);
 Route::group(['prefix' => 'assistantdean','middleware' => 'roles'], function() {
-	Route::get('/index', ['uses' => 'Deans\AssistantDeanController@index','roles' => ['Assistant Dean']]);
+	Route::get('/index', ['uses' => 'Deans\AssistantDeanController@index','roles' => ['Admin','Assistant Dean']]);
 	Route::get('/assign/{schedule_info}', ['uses' => 'Deans\AssistantDeanController@assign','roles' => ['Assistant Dean']]);
 	Route::post('/assign/{schedule_info}', ['uses' => 'Deans\AssistantDeanController@submitassign','roles' => ['Assistant Dean']]);
 	Route::get('/instructors', ['uses' => 'Deans\AssistantDeanController@instructors','roles' => ['Assistant Dean']]);

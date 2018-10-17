@@ -110,8 +110,8 @@
                                         @endif
                                     @endforeach
                                     <th class="text-center">{{ $grade }}</th>
-                                    <td class="text-center">{{ $subjectObject->where('sub_description',$subjectForSemester)->first()->semester  }}</td>
-                                       <td class="text-center">{{ $subjectObject->where('sub_description',$subjectForSemester)->first()->units  }}</td>
+                                    <td class="text-center">{{ $subjectObject->where('sub_description',trim($subjectForSemester))->first()->semester  }}</td>
+                                       <td class="text-center">{{ $subjectObject->where('sub_description',trim($subjectForSemester))->first()->units  }}</td>
                                     <td class="text-center">{{ $s->block }}</td>
                                 </tr>
                                 @endforeach

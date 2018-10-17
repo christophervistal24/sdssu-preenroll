@@ -21,7 +21,7 @@ class AssistantDeanController extends Controller
 
 	public function assign(InstructorSchedule $schedule_info)
 	{
-		$instructors = Instructor::orderBy('id','DESC')->get();
+		$instructors = Instructor::orderBy('id','DESC')->where('active','1')->get();
     	return view('deans.assistant.index',compact('instructors','schedule_info'));
 	}
 

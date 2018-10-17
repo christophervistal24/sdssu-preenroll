@@ -20,7 +20,7 @@ class UserTableSeeder extends Seeder
         $role_assistant_dean = Role::where('name','Assistant Dean')->first();
 
         $parent = new User();
-        $parent->name = 'Joshua';
+        $parent->name = 'Parent account';
         // $parent->email ='parent@gmail.com';
         $parent->id_number = '1511111';
         $parent->password = bcrypt(1234);
@@ -28,7 +28,7 @@ class UserTableSeeder extends Seeder
         $parent->roles()->attach($role_parent);
 
         $admin = new User();
-        $admin->name = 'Villamon Admin';
+        $admin->name = 'Joshua Admin';
         // $admin->email ='admin@gmail.com';
         $admin->id_number = '1522222';
         $admin->password = bcrypt(1234);
@@ -165,7 +165,7 @@ class UserTableSeeder extends Seeder
         /*ASSISTANT DEAN*/
         $instructor = new User();
         $instructor->name = 'Engr. Jessie A. Demontano';
-        $instructor->id_number = '17';
+        $instructor->id_number = '1500001';
         $instructor->password = bcrypt(1234);
         $instructor->save();
         $instructor->roles()->attach($role_assistant_dean);

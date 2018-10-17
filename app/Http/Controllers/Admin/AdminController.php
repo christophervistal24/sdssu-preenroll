@@ -435,17 +435,24 @@ class AdminController extends Controller
             'phone_number' => 'required',
             'message'      => 'required'
         ]);
+        /**
+         * WANG AMO INE ANG PULIHAN  YAUN BITAW MAY SETAPIKEY WANG AYAW I APIL ANG SINGLE QUOTE
+         * BASIN MA MA'AM AMO GAUD INE SIYA
+         */
         $config        = Configuration::getDefaultConfiguration();
-        $config->setApiKey('Authorization', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJhZG1pbiIsImlhdCI6MTUzODg4MTY4NSwiZXhwIjo0MTAyNDQ0ODAwLCJ1aWQiOjQ3NTk1LCJyb2xlcyI6WyJST0xFX1VTRVIiXX0.89tHnbHlSQyrSDLjhKl-7UdPzWxSkkBK2I5n0nnEc1U');
+        $config->setApiKey('Authorization', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJhZG1pbiIsImlhdCI6MTUzOTc5MTgzNCwiZXhwIjo0MTAyNDQ0ODAwLCJ1aWQiOjQ3NTk1LCJyb2xlcyI6WyJST0xFX1VTRVIiXX0.ofooDgxBKSr0S6PHk-_BlS8OV3s899ItQYR1pzVnL14');
         $apiClient     = new ApiClient($config);
         $messageClient = new MessageApi($apiClient);
 
         // Sending a SMS Message
+        // wang utroha sab ang device id 
+        //wang number da gaud yaun wang quotation
         $sendMessageRequest1 = new SendMessageRequest([
             'phoneNumber' => $request->phone_number,
             'message' => $request->message,
-            'deviceId' => 103181
+            'deviceId' => 103760
         ]);
+
         {
              $sendMessages = $messageClient->sendMessages([
                 $sendMessageRequest1,

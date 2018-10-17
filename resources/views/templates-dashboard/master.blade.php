@@ -6,7 +6,7 @@
         <title>SDSSU</title>
         <meta name="csrf-token" content="{{ csrf_token() }}" />
         <script src="/js/third_party/sweetalert.js"></script>
-        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
+        <link rel="stylesheet" href="{{url('/css/datatables-bootstrap4.min.css')}}">
         <meta name="description" content="A high-quality &amp; free Bootstrap admin dashboard template pack that comes with lots of templates and components.">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">

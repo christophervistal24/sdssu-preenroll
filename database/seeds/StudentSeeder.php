@@ -17,22 +17,22 @@ class StudentSeeder extends Seeder
     {
     	$role_student = Role::where('name','Student')->first();
       $parent = new StudentParent;
-      $parent->mothername = 'Regina Vistal';
-      $parent->fathername = 'Crisogono Vistal';
+      $parent->mothername = 'Josephine Villamon';
+      $parent->fathername = 'Virgintino Villamon';
       $parent->mobile_number = '09193693499';
       $parent->save();
 
    		$student = new Student();
-   		$student->id_number = 1501755;
-   		$student->fullname = 'Christopher P. Vistal';
+   		$student->id_number = 1500507;
+   		$student->fullname = 'Jover John Villamon';
    		$student->year = 1;
    		$student->course_id = 2;
       $student->student_parent_id = $parent->id;
    		$student->save();
 
    		$s = new User();
-      $s->name = 'Christopher P. Vistal';
-      $s->id_number = 1501755;
+      $s->name = 'Jover John Villamon';
+      $s->id_number = 1500507;
       $s->password = bcrypt(1234);
       $s->save();
  		  $s->roles()->attach($role_student);

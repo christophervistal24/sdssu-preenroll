@@ -18,6 +18,7 @@ class CheckRole
         if ($request->user() === null) {
             return response(abort(404));
         }
+
         $actions = $request->route()->getAction();
         $roles = isset($actions['roles']) ? $actions['roles'] : null;
         if ($request->user()->hasAnyRole($roles) || !$roles) {

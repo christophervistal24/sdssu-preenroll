@@ -18,7 +18,7 @@ class InstructorSeeder extends Seeder
 				'education_qualification' => strtolower('MST-HE'),
 				'position' => strtolower('ASSISTANT PROFESSOR 1'),
                 'status' => 'permanent',
-                'mobile_number' => '+639950523688',
+                'mobile_number' => '+639098387699',
                 'active' => 1,
             ],
             [
@@ -27,7 +27,7 @@ class InstructorSeeder extends Seeder
                 'education_qualification' => strtolower('MAT-Math'),
                 'position' => strtolower('ASSISTANT PROFESSOR 1') ,
                 'status' => 'permanent',
-				'mobile_number' => '+639950523688',
+				'mobile_number' => '+639127961717',
                 'active' => 1,
             ],
             [
@@ -36,7 +36,7 @@ class InstructorSeeder extends Seeder
                 'education_qualification' => strtolower('MSCS'),
                 'position' => strtolower('Instructor 1') ,
                 'status' => 'permanent',
-                'mobile_number' => '+639950523688',
+                'mobile_number' => '+639109383091',
                 'active' => 1,
             ],
             [
@@ -45,7 +45,7 @@ class InstructorSeeder extends Seeder
                 'education_qualification' => strtolower('MEP-EE'),
                 'position' => strtolower('ASSISTANT PROFESSOR 4') ,
                 'status' => 'permanent',
-                'mobile_number' => '+639950523688',
+                'mobile_number' => '+639485572288',
                 'active' => 1,
             ],
             [
@@ -54,7 +54,7 @@ class InstructorSeeder extends Seeder
                 'education_qualification' => strtolower('MIT'),
                 'position' => strtolower('ASSISTANT PROFESSOR 2') ,
                 'status' => 'permanent',
-                'mobile_number' => '+639950523688',
+                'mobile_number' => '+639306521159',
                 'active' => 1,
             ],
             [
@@ -63,7 +63,7 @@ class InstructorSeeder extends Seeder
                 'education_qualification' => strtolower('MSCS'),
                 'position' => strtolower('INSTRUCTOR 1'),
                 'status' => 'permanent',
-                'mobile_number' => '+639950523688',
+                'mobile_number' => '+639306521159',
                 'active' => 1,
             ],
             [
